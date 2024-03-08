@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# คลาส CreateMovies ใช้สำหรับการสร้างตาราง movies ในฐานข้อมูล
 class CreateMovies < ActiveRecord::Migration
   def change
     create_table :movies do |t|
@@ -5,8 +8,7 @@ class CreateMovies < ActiveRecord::Migration
       t.string :rating
       t.text :description
       t.datetime :release_date
-      # Add fields that let Rails automatically keep track
-      # of when movies are added or modified:
+      # เพิ่มฟิลด์เพื่อให้ Rails เก็บระบบเวลาเมื่อภาพยนตร์ถูกเพิ่มหรือแก้ไขโดยอัตโนมัติ:
       t.timestamps
     end
   end
